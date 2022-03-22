@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:3306/macro?createDatabaseIfNotExist=true
+    username : ceiba
+    password: ceiba
+server:
+  port: 8081
