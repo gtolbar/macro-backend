@@ -43,8 +43,9 @@ CREATE TABLE persona(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nombre VARCHAR(50) NOT NULL UNIQUE,
 	edad INT UNSIGNED NOT NULL,
-    altura INT UNSIGNED NOT NULL,
+    altura double UNSIGNED NOT NULL,
     peso INT UNSIGNED NOT NULL,
+    foto_url VARCHAR(250),
     id_usuario INT NOT NULL,
 		FOREIGN KEY(id_usuario) REFERENCES usuario(id),
 	id_periodo INT NOT NULL,
@@ -82,9 +83,9 @@ INSERT INTO usuario(nombre,clave,estado,id_rol) VALUES
 
 -- changeset Gustavo:10
 -- comment: Se crea registro personas prueba
-INSERT INTO persona(nombre,edad,altura,peso,id_usuario,id_periodo) VALUES 
-("Gustavo admin","24","1.70","56","1","2"),
-("Gustavo user","24","1.70","56","2","2");
+INSERT INTO persona(nombre,edad,altura,peso,id_usuario,id_periodo,foto_url) VALUES 
+("Gustavo admin","24","1.70","56","1","2","https://www.gub.uy/fiscalia-general-nacion/sites/fiscalia-general-nacion/files/catalogo/Sin-Perfil-Hombre.png"),
+("Gustavo user","24","1.70","56","2","2","https://www.gub.uy/fiscalia-general-nacion/sites/fiscalia-general-nacion/files/catalogo/Sin-Perfil-Hombre.png");
 
 -- changeset Gustavo:11
 -- comment: Se crea registro personas prueba

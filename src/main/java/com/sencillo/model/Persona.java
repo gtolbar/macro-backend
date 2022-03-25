@@ -27,10 +27,13 @@ public class Persona {
 	private int edad;
 	
 	@Column(name="altura", nullable = false)
-	private int altura;
+	private double altura;
 	
 	@Column(name="peso", nullable = false )
 	private int peso;
+	
+	@Column(name="foto_url")
+	private String fotoUrl;
 	
 	@ManyToOne
 	@JoinColumn(name="id_usuario", nullable = false)
