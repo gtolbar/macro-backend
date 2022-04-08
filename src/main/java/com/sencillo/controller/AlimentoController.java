@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.sencillo.dto.AlimentoDTO;
 import com.sencillo.exception.ModeloNotFoundException;
 import com.sencillo.model.Alimento;
 import com.sencillo.service.IAlimentoService;
@@ -51,6 +52,14 @@ public class AlimentoController {
 		Alimento obj= service.registrar(p);
 		return new ResponseEntity<Alimento>(obj,HttpStatus.OK);
 	}
+	
+	
+	@GetMapping("/consulta-alimentos")
+	public ResponseEntity<List<AlimentoDTO>> consultaAlimentos() throws Exception{
+		List<AlimentoDTO> lista= service.consultaAlimentos();
+		return new ResponseEntity<List<AlimentoDTO>>(lista,HttpStatus.OK);
+	}
+	
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> eliminar(@PathVariable Integer id) throws Exception{
