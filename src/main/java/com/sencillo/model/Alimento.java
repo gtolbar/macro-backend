@@ -29,5 +29,8 @@ public class Alimento {
 	
 	@Column(name="grasa", nullable=false)
 	private int grasa;
+	
+	@Column(name="cantidad", nullable=false)
+	private int cantidad;
 
 }

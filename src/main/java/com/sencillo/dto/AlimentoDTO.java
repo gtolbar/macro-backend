@@ -11,5 +11,6 @@ public class AlimentoDTO {
 	private int carbohidrato;
 	private int grasa;
 	private int caloria;
+	private int cantidad;
 
 }

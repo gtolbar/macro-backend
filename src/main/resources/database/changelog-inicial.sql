@@ -7,7 +7,8 @@ CREATE TABLE alimento(
     nombre VARCHAR(50) NOT NULL,
     proteina INT NOT NULL,
 	carbohidrato INT NOT NULL,
-    grasa INT NOT NULL
+    grasa INT NOT NULL,
+    cantidad INT NOT NULL
 );
 
 -- changeset Gustavo:2
@@ -89,4 +90,4 @@ INSERT INTO persona(nombre,edad,altura,peso,id_usuario,id_periodo,foto_url) VALU
 
 -- changeset Gustavo:11
 -- comment: Se crea registro personas prueba
-INSERT INTO alimento(nombre,proteina,carbohidrato,grasa) VALUES ("BiPro","22","0","0");
+INSERT INTO alimento(nombre,proteina,carbohidrato,grasa,cantidad) VALUES ("BiPro","22","0","0","100");

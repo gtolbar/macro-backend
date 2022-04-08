@@ -39,6 +39,7 @@ public class AlimentoServiceImpl extends CRUDImpl<Alimento, Integer> implements 
 			alimentoDTO.setCarbohidrato(alimento.getCarbohidrato());
 			alimentoDTO.setProteina(alimento.getProteina());
 			alimentoDTO.setCaloria(caloriasAlimento);
+			alimentoDTO.setCantidad(alimento.getCantidad());
 			objDTO.add(alimentoDTO);
 		}
 		System.out.println(objDTO);
